@@ -5,10 +5,4 @@
       "use": "@vercel/static"
     }
   ]
-  // "routes": [
-  //   {
-  //     "src": "/(.*)",
-  //     "dest": "docs/dist/$1"
-  //   }
-  // ]
 }
