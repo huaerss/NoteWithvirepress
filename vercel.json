@@ -1,7 +1,14 @@
 {
-  "git": {
-    "deploymentEnabled": {
-      "gh-pages": false
+  "builds": [
+    {
+      "src": "docs/dist/**",
+      "use": "@vercel/static"
     }
-  }
+  ]
+  // "routes": [
+  //   {
+  //     "src": "/(.*)",
+  //     "dest": "docs/dist/$1"
+  //   }
+  // ]
 }
