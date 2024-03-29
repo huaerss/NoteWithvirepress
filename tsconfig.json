@@ -12,6 +12,7 @@
   },
   "include": [
     "env.d.ts",
-    "**/.vitepress/**/*"
+    "**/.vitepress/**/*",
+    "docs/front"
   ]
 }

@@ -11,7 +11,7 @@ hero:
     alt: everything
   actions:
     - text: 开始学习
-      link: '#'
+      link: '/front/'
 
     - text: 测试页
       link: /test
@@ -25,7 +25,7 @@ features:
   - icon: 📘
     title: 后端
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: https://notes.fe-mm.com/analysis/utils/only-allow
+    link: node/
     linkText: 源码阅读
   - icon: 💡
     title: 杂食 / 工具 
