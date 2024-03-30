@@ -8,14 +8,10 @@ const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: 'dist',
-  base: './',
-
-  // base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
   lang: 'zh-CN',
   title: 'ALL IN',
-  description: 'All of them.成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等',
   head,
-
   lastUpdated: true,
   cleanUrls: true,
 
@@ -41,11 +37,6 @@ export default defineConfig({
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/huaerss' }],
-
-    // footer: {
-    //   message: '如有转载或 CV 的请标注本站原文地址',
-    //   copyright: 'Copyright © 2019-present maomao',
-    // },
 
     darkModeSwitchLabel: '外观',
     returnToTopLabel: '返回顶部',

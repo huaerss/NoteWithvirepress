@@ -8,29 +8,27 @@ hero:
   tagline: 基于 VitePress 的导航页面模板
   image:
     src: /logo.png
+    link: '/'
     alt: everything
   actions:
     - text: 开始学习
       link: '/front/'
 
-    - text: 测试页
-      link: /test
-      theme: alt
 features:
   - icon: 📖
     title: 前端
     details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: https://notes.fe-mm.com/fe/javascript/types
+    link: '/front/'
     linkText: 前端常用知识
   - icon: 📘
     title: 后端
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: node/
+    link: /back/
     linkText: 源码阅读
   - icon: 💡
     title: 杂食 / 工具 
     details: 在各种地方中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />
-    link: /
+    link: /any/
     linkText: everything
 
 ---
