@@ -10,11 +10,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
         text: 'vue',
         items: [
           {
-            text: 'Proxy和defineProperty', link: '/front/vue/Proxy和defineProperty的区别 .md'
+            text: 'Proxy和defineProperty', link: '/front/vue/Proxy和defineProperty的区别.md'
           }
         ]
-
-
       }
     ]
   },
@@ -22,17 +20,23 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     text: '后端',
     items: [
       {
-        text: 'Node.',
+        text: 'Node',
         items: [
           {
             text: 'npm install 详解', link: '/back/node/npm install 详解.md'
+          },
+          {
+            text: '跨域处理以及SSE', link: '/back/node/cors-sse.md'
+          },
+          {
+            text: 'knex操作数据库', link: '/back/node/knex操作数据库.md'
           }
         ]
       }
     ]
   },
   {
-    text: '部署',
+    text: 'AnyThink技巧',
     items: [
       {
         text: 'Nginx',

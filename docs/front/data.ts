@@ -46,7 +46,7 @@ export const NAV_DATA: NavData[] = [
     items: [
       {
         icon: '/icons/chatgpt.png',
-        title: 'ChatGPT（最强）',
+        title: 'ChatGPT',
         link: 'https://chat.openai.com/chat',
       },
       {

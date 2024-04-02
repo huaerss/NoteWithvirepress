@@ -8,6 +8,6 @@ import { NAV_DATA } from './data'
 </script>
 <style src="./index.scss"></style>
 
-# 部署知识 各种工具的使用 以及 一些奇淫技巧
+# 部署知识 各种工具的使用
 
 <br />
