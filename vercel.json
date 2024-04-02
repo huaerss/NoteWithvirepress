@@ -1,10 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "docs/dist/**",
-      "use": "@vercel/static"
-    }
-  ],
   "git": {
     "deploymentEnabled": {
       "gh-pages": false
