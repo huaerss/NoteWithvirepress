@@ -39,6 +39,12 @@ export const NAV_DATA: NavData[] = [
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn',
       },
+      {
+        icon: 'https://www.itdog.cn/frame/images/logo_2023.png?v=20240109A',
+        title: '站点测试工具',
+        desc: '全国ping站点测速工具 是否 被墙检测 网站速度测试 网站安全检测 网站性能',
+        link: 'https://www.itdog.cn/http/',
+      },
     ],
   },
   {
