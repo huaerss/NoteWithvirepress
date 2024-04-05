@@ -35,20 +35,16 @@ Serverless Devs 是一个开源开放的 Serverless 开发者平台，致力于
 
 s命令 你安装完成 @serverless-devs/s 这个之后就有了
 
-``` sh
-s config add 
-```
-
 ![alt text](image.png)
 
 3.进入阿里云创建一个accessKey
 
 <https://ram.console.aliyun.com/manage/ak?spm=5176.12818093_47.top-nav.dak.225d16d0Vd41dl>
 
+使用
+
 ``` sh
-AccessKey  LTAI5tH4F1WcjbajpcH1jmVm   //秘钥
-secret   2Q5ki9K4zuUjBD7asgH8dgx1URt0ty //密码
-Alias  serveless
+s config add   // 配置秘钥 别名
 ```
 
 4.查看是否配置成功
