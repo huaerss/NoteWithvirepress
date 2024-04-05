@@ -29,7 +29,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
             text: '跨域处理以及SSE', link: '/back/node/cors-sse.md'
           },
           {
-            text: 'knex操作数据库', link: '/back/node/knex操作数据库.md'
+            text: 'knex操作数 据库', link: '/back/nodse/knex操作数据库.md'
+          },
+          {
+            text: 'serverLess 云函数', link: '/back/node/serverLess.md'
           }
         ]
       }
