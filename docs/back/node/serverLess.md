@@ -41,10 +41,14 @@ s命令 你安装完成 @serverless-devs/s 这个之后就有了
 
 <https://ram.console.aliyun.com/manage/ak?spm=5176.12818093_47.top-nav.dak.225d16d0Vd41dl>
 
-使用
+``` sh
+s config add 
+```
 
 ``` sh
-s config add   // 配置秘钥 别名
+AccessKey  **//秘钥
+secret   **URt0ty* //w
+Alias  serveless
 ```
 
 4.查看是否配置成功
