@@ -37,7 +37,7 @@ s命令 你安装完成 @serverless-devs/s 这个之后就有了
 
 ![alt text](image.png)
 
-3.进入阿里云创建一个accessKey
+3.进入阿里云创建一个
 
 <https://ram.console.aliyun.com/manage/ak?spm=5176.12818093_47.top-nav.dak.225d16d0Vd41dl>
 
