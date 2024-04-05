@@ -45,12 +45,6 @@ s命令 你安装完成 @serverless-devs/s 这个之后就有了
 s config add 
 ```
 
-``` sh
-AccessKey  **//秘钥
-secret   **URt0ty* //w
-Alias  serveless
-```
-
 4.查看是否配置成功
 
 ``` sh
