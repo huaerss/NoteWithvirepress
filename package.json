@@ -34,5 +34,8 @@
     "*.{js,jsx,tsx,vue,css,scss,less,md,json}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "node-cache": "^5.1.2"
   }
 }

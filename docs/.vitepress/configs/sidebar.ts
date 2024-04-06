@@ -29,10 +29,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
             text: '跨域处理以及SSE', link: '/back/node/cors-sse.md'
           },
           {
-            text: 'knex操作数 据库', link: '/back/nodse/knex操作数据库.md'
+            text: 'knex操作数据库', link: '/back/node/knex操作数据库.md'
           },
           {
             text: 'serverLess 云函数', link: '/back/node/serverLess.md'
+          },
+          {
+            text: '爬虫+python', link: '/back/node/爬虫+python.md'
           }
         ]
       }
@@ -57,6 +60,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           },
           {
             text: '科学上网', link: '/any/other/科学上网.md'
+          }
+        ]
+      },
+      {
+        text: '部署',
+        items: [
+          {
+            text: 'pm2 部署', link: '/any/deploy/pm2部署Node.md'
           }
         ]
       }

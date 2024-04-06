@@ -1,13 +1,67 @@
 ---
 layoutClass: m-nav-layout
 outline: [2, 3, 4]
+
 ---
 
 <script setup>
 import { NAV_DATA } from './data'
+import { ref } from 'vue'
+const data = ref([
+  {
+    title: '数据加载中',
+  },
+])
+fetch("https://htmlpng-mmo-yxvdsihnpa.cn-shenzhen.fcapp.run",{
+  method: "POST",
+  body: JSON.stringify({
+     type:'后端'
+  })
+
+})
+.then(res => res.json())
+.then(juejinList => {  
+  data.value = juejinList
+})
+.catch(err => {
+data.value = [
+  {
+    title: '数据加载失败',
+  }
+]
+})
+
 </script>
 <style src="./index.scss"></style>
 
 # 后端导航
 
-<br />
+## 掘金热榜
+
+`爬虫`
+
+<template v-if="data.length" style='color:red'>
+  <ul>
+    <li v-for="item in data" :key="item.src" style=''>
+      <a :href="item.src" target="_blank">{{ item.title }}</a>
+    </li>
+  </ul>
+</template>
+
+<style scoped>
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin: 10px 0;
+  }
+  a {
+    color: #058F9C;
+    /* text-decoration: none; */
+  }
+  a:hover {
+    color: #f00;
+  }
+
+</style>
