@@ -9,7 +9,7 @@ import { NAV_DATA } from './data'
 import { ref } from 'vue'
 const data = ref([
   {
-    title: '数据加载中',
+    title: '数据加载中..请等待3S左右',
   },
 ])
 fetch("https://htmlpng-mmo-yxvdsihnpa.cn-shenzhen.fcapp.run",{
@@ -50,7 +50,7 @@ data.value = [
 
 <style scoped>
   ul {
-    list-style: none;
+    list-style: decimal;
     padding: 0;
   }
   li {
