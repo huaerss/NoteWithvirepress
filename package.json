@@ -2,7 +2,7 @@
   "name": "myvitepress",
   "type": "module",
   "version": "1.0.0",
-  "description": "vitepress网站",
+  "description": "个人记录网站",
   "private": true,
   "scripts": {
     "dev": "vitepress dev docs --port=5177 --host",
@@ -34,8 +34,5 @@
     "*.{js,jsx,tsx,vue,css,scss,less,md,json}": [
       "prettier --write"
     ]
-  },
-  "dependencies": {
-    "node-cache": "^5.1.2"
   }
 }
