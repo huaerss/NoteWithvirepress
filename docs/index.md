@@ -5,7 +5,7 @@ layoutClass: 'm-home-layout'
 hero:
   name: All of them.
   text: 什么都沾点
-  tagline: 基于 VitePress 的导航页面模板
+  tagline: 个人积累以及学习笔记
   image:
     src: /logo.png
     link: '/'
