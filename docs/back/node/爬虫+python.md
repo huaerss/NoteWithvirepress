@@ -51,3 +51,50 @@ for (let el of navlist) {
     }
 }
 ```
+
+## Node中调用python
+
+使用child_process库
+
+``` js
+import { spawn } from 'child_process'
+const python = spawn('python3', ['captcha_ocr.py']);
+python.stdout.on('data', (data) => {  // 获取python输出 
+
+    result = data.toString();
+});
+
+python.stderr.on('data', (data) => { // 获取python错误输出
+    console.error(`stderr: ${data}`);
+});
+
+python.on('close', (code) => {  // 获取python退出码
+    if (code !== 0) {  // 退出码不为0
+        reject(new Error(`Python script exited with code ${code}`)); // 抛出错误
+    }
+    resolve(result.trim());
+});
+
+```
+
+## python 中
+
+使用ddddorc库 识别验证码
+
+``` py
+
+import ddddocr
+
+def recognize_captcha(image_path): // 识别验证码
+    ocr = ddddocr.DdddOcr()
+    with open(image_path, 'rb') as f:
+        img_bytes = f.read()
+
+    res = ocr.classification(img_bytes)
+    return res
+
+if __name__ == '__main__':  // 入口 
+    image_path = 'captcha.png'
+    code = recognize_captcha(image_path)
+    print(code)
+```

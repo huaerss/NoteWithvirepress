@@ -6,7 +6,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     text: '前端',
     items: [
       {
-
+        text: 'JavaScript',
+        items: [
+          {
+            text: 'SVG格式转换IMG', link: '/front/js/SVG格式转换.md'
+          },
+        ]
+      },
+      {
         text: 'vue',
         items: [
           {
@@ -14,7 +21,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           }
         ]
       }
+
     ]
+
   },
   {
     text: '后端',
@@ -36,6 +45,17 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           },
           {
             text: '爬虫+python', link: '/back/node/爬虫+python.md'
+          }
+        ],
+      },
+      {
+        text: 'Node框架',
+        items: [
+          {
+            text: 'NestJS', link: '/back/node-frame/nest-cli.md'
+          },
+          {
+            text: 'cookie+验证码', link: '/back/node-frame/cookie+验证码.md'
           }
         ]
       }
