@@ -62,7 +62,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
         items: [
           {
             text: 'NestJS创建',
-            link: '/back/node-frame/Nest-cli.md',
+            link: '/back/node-frame/Nest创建.md',
           },
           {
             text: 'cookie+验证码',
