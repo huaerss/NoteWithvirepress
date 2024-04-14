@@ -1,7 +1,9 @@
 # Cors 跨域
+>
 >跨域资源共享（Cross-Origin Resource Sharing，CORS）是一种机制，用于在浏览器中实现跨域请求访问资源的权限控制。当一个网页通过 XMLHttpRequest 或 Fetch API 发起跨域请求时，浏览器会根据同源策略（Same-Origin Policy）进行限制。同源策略要求请求的源（协议、域名和端口）必须与资源的源相同，否则请求会被浏览器拒绝
 
-##  如何发生跨域
+## 如何发生跨域
+
 ``` js
 //前端
 fetch('http://localhost:3000/info').then(res=>{
@@ -23,7 +25,9 @@ app.listen(3000, () => {
     console.log('http://localhost:3000')
 })
 ```
+
 ## 处理方法
+
 ``` js
 Access-Control-Allow-Origin: * | Origin
 // express 中 use中间件
@@ -33,21 +37,20 @@ app.use('*',(req,res,next)=>{
 })
 
 ```
+
 ## 特殊注意
+
 因为 `application/json`  不属于cors 范畴需要手动支持
+
 ```js
 
 'Access-Control-Allow-Headers','Content-Type'
 
 ```
 
-
-
-# SSE技术 
+## SSE技术
 
 >Server-Sent Events（SSE）是一种在客户端和服务器之间实现单向事件流的机制，允许服务器主动向客户端发送事件数据。在 SSE 中，可以使用自定义事件（Custom Events）来发送具有特定类型的事件数据。
-
- 
 
 webSocket属于全双工通讯，也就是前端可以给后端实时发送，后端也可以给前端实时发送，SSE属于单工通讯，后端可以给前端实时发送
 
@@ -67,6 +70,7 @@ app.get('/sse',(req,res)=>{
 ```
 
 ## 前端接收
+
 ``` js
 const sse = new EventSource('http://localhost:3000/sse')
 sse.addEventListener('test', (event) => {
@@ -75,7 +79,7 @@ sse.addEventListener('test', (event) => {
 
 ```
 
-默认是`message `  只要按照格式进行SSE格式进行书写即可改名
+默认是`message`  只要按照格式进行SSE格式进行书写即可改名
 
 ## 查看结果
 
