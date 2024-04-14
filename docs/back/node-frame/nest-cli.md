@@ -13,4 +13,33 @@ nest new [项目名称]
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    ```
+```
+
+## 创建一个模块
+
+使用nest --help可以查看所有的命令 并且查看有哪些模块
+![alt text](./image.png)
+
+``` js
+nest g module [模块名称]
+```
+
+## 配置静态文件
+
+首先安装第三方模块
+
+``` js
+pnpm install @nestjs/platform-express
+
+```
+
+在main.ts中配置
+
+``` js
+import { NestExpressApplication } from '@nestjs/platform-express';
+const app = await NestFactory.create<NestExpressApplication>(AppModule);
+// 配置静态文件夹目录
+  app.useStaticAssets('public',{ prefix: '/public' });
+
+
+```
