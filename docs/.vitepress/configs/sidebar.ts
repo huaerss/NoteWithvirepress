@@ -6,11 +6,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     text: '前端',
     items: [
       {
-        text: 'JavaScript',
+        text: 'JS &&   TS',
         items: [
           {
             text: 'SVG格式转换IMG',
             link: '/front/js/SVG格式转换.md',
+          },
+          {
+            text: 'TS装饰器 Decorator*',
+            link: '/front/ts/TS装饰器.md',
           },
         ],
       },
@@ -79,8 +83,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           {
             text: 'TypeOrm框架',
             link: '/back/node-frame/TypeOrm.md',
-
-          }
+          },
         ],
       },
     ],
@@ -97,8 +100,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           },
           {
             text: '个人常用git命令',
-            link: '/any/deploy/git常用命令.md'
-          }
+            link: '/any/deploy/git常用命令.md',
+          },
         ],
       },
       {
@@ -123,7 +126,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           },
         ],
       },
-
     ],
   },
 ]
