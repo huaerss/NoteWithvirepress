@@ -18,7 +18,7 @@ nest new [项目名称]
 ## 创建一个模块
 
 使用nest --help可以查看所有的命令 并且查看有哪些模块
-![alt text](./image.png)
+![alt text](./image/image.png)
 
 ``` js
 nest g module [模块名称]

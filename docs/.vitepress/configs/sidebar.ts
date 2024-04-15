@@ -76,6 +76,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
             text: 'NestJS文件上传',
             link: '/back/node-frame/Nest文件上传.md',
           },
+          {
+            text: 'TypeOrm框架',
+            link: '/back/node-frame/TypeOrm.md',
+
+          }
         ],
       },
     ],
@@ -84,10 +89,23 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     text: 'AnyThink技巧',
     items: [
       {
+        text: '部署',
+        items: [
+          {
+            text: 'pm2 部署',
+            link: '/any/deploy/pm2部署Node.md',
+          },
+          {
+            text: '个人常用git命令',
+            link: '/any/deploy/git常用命令.md'
+          }
+        ],
+      },
+      {
         text: 'Nginx',
         items: [
           {
-            text: 'Nginx 通用命令',
+            text: 'Nginx 常用指令以及调试',
             link: '/any/Nginx/nginx常用指令以及调试.md',
           },
         ],
@@ -105,15 +123,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           },
         ],
       },
-      {
-        text: '部署',
-        items: [
-          {
-            text: 'pm2 部署',
-            link: '/any/deploy/pm2部署Node.md',
-          },
-        ],
-      },
+
     ],
   },
 ]

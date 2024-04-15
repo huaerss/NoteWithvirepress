@@ -35,7 +35,7 @@ Serverless Devs 是一个开源开放的 Serverless 开发者平台，致力于
 
 s命令 你安装完成 @serverless-devs/s 这个之后就有了
 
-![alt text](image.png)
+![alt text](./image/image.png)
 
 3.进入阿里云创建一个
 
@@ -51,7 +51,7 @@ s config add
 s config get -a serveless
 ```
 
-![alt text](image-1.png)
+![alt text](./image/image-1.png)
 
 ## 创建项目
 
@@ -61,7 +61,7 @@ s config get -a serveless
 s 
 ```
 
-![alt text](image-2.png)
+![alt text](./image/image-2.png)
 
 打开生成的项目
 
@@ -75,13 +75,13 @@ s deploy
 
 进入 <https://fcnext.console.aliyun.com/>
 
-![alt text](image-3.png)
+![alt text](./image/image-3.png)
 
 点击进入对应的云函数
 
 选择触发器
 
-![alt text](image-4.png)
+![alt text](./image/image-4.png)
 
 ## 使用
 
