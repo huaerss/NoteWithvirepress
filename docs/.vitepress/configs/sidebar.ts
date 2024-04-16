@@ -14,7 +14,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           },
           {
             text: 'TS装饰器 Decorator*',
-            link: '/front/ts/TS装饰器.md',
+            link: '/front/ts/TS装饰器Decorator.md',
           },
         ],
       },
@@ -83,6 +83,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           {
             text: 'TypeOrm框架',
             link: '/back/node-frame/TypeOrm.md',
+          },
+          {
+            text: 'CRUD操作',
+            link: '/back/node-frame/NestCRUD+分页.md',
           },
         ],
       },
