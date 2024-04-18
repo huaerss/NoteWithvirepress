@@ -17,24 +17,39 @@ hero:
 features:
   - icon: 📖
     title: 前端
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
+    details: 整理前端常用知识点
     link: '/front/'
     linkText: 前端常用知识
   - icon: 📘
     title: 后端
-    details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
+    details: 个人后端学习笔记
     link: /back/
     linkText: 源码阅读
   - icon: 💡
     title: 杂食 / 工具 
-    details: 在各种地方中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />
+    details: 在各种地方中学到的一切<small>（常用库/工具/技巧等）</small><br />
     link: /any/
     linkText: everything
+  - icon: 📚
+    title: NestJS
+    details: <small>NestJS 是一个渐进式的企业级 Node.js 和 TypeScript 框架，它融合了 Angular 的结构和 Express 的简洁性。</small> 
+    link: /back/node-frame/Nest创建
+    linkText: NestJs
+  - icon: 🍇
+    title: 
+    details: 
+    link: 
+    linkText: 
+  - icon: 😭
+    title: 
+    details:
+    link: 
+    linkText: 
+
 
 ---
 
 <style>
-/*爱的魔力转圈圈*/
 .m-home-layout .image-src:hover {
   transform: translate(-50%, -50%) rotate(666turn);
   transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
