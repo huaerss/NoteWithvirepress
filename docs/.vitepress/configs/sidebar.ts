@@ -81,12 +81,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
             link: '/back/node-frame/Nest文件上传.md',
           },
           {
+            text: 'NestJS异常拦截',
+            link: '/back/node-frame/Nest异常拦截器.md',
+          },
+          {
             text: 'TypeOrm框架',
             link: '/back/node-frame/TypeOrm.md',
           },
           {
             text: 'CRUD操作',
             link: '/back/node-frame/NestCRUD+分页.md',
+          },
+          {
+            text: 'DTO管道验证',
+            link: '/back/node-frame/DTO管道验证.md',
           },
         ],
       },

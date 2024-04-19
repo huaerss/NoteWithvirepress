@@ -125,4 +125,4 @@ ColumnOptions中可用选项列表：
 - generatedType: "VIRTUAL"|"STORED" - 生成的列类型。 仅在MySQL (opens new window)中使用。
 - hstoreType: "object"|"string" -返回HSTORE列类型。 以字符串或对象的形式返回值。 仅在Postgres中使用。
 - array: boolean - 用于可以是数组的 postgres 列类型（例如 int []）
-- transformer: { from(value: DatabaseType): EntityType, to(value: EntityType): DatabaseType } - 用于将任意类型- EntityType的属性编组为数据库支持的类型DatabaseType。
+- transformer: { from(value: DatabaseType): EntityType, to(value: EntityType): DatabaseType }- 用于将任意类型- EntityType的属性编组为数据库支持的类型DatabaseType。
