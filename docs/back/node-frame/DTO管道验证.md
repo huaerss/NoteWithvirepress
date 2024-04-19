@@ -37,5 +37,7 @@ async function bootstrap() {
 
 ## 验证结果
 
-请求<http://localhost:3000/login/msg>
+请求/login/msg接口，传入一个字符串，会返回错误信息
+
+```ts
 ![Alt text](./image/DTO.png)

@@ -93,7 +93,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
             link: '/back/node-frame/NestCRUD+分页.md',
           },
           {
-            text: 'DTO管道验证 ',
+            text: 'DTO管道验证',
             link: '/back/node-frame/DTO管道验证.md',
           },
         ],
