@@ -1,8 +1,9 @@
 import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
+import monacoEditorPlugin from 'vite-plugin-monaco-editor'
 
-import { head, nav, sidebar } from './configs'
+import { head, nav, sidebar, frontsidebar, anysidebar } from './configs'
 
 const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
@@ -25,12 +26,16 @@ export default defineConfig({
   themeConfig: {
     i18nRouting: false,
     search: {
-      provider: 'local'
+      provider: 'local',
     },
     logo: '/logo.png',
 
     nav,
-    sidebar,
+    sidebar: {
+      '/front/': frontsidebar,
+      '/back/': sidebar,
+      '/any/': anysidebar,
+    },
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',
