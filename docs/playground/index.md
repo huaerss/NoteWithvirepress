@@ -1,18 +1,21 @@
 ---
 sidebar: false
 ---
+# 代码编辑器
 
-<div id='get'>
+<div id='get' class='get'>
   语言: <select id="lang">
    <option :value="item.value" v-for='item in languages'>{{item.name}}</option>
   </select>
 </div>
 <div class='happ'>
- <div id='container' style="width: 800px; height: 300px"></div>
- <button @click='runcode'>点击运行</button>
+ <div id='container' style="width: 800px; height: 400px"></div>
+ <div class='btnx'>
+ <button @click='runcode' class='codebtn'>点击运行</button>
+ </div>
 
-   代码结果:
- <div id='rusult' style="width: 800px; height: 300px"></div>
+   `代码结果:`
+ <div id='rusult' style="width: 800px; height: 100px"></div>
 </div>
 
 <script setup>
@@ -39,7 +42,6 @@ onMounted(() => {
 
   if (!import.meta.env.SSR) { // 只在客户端执行
   //执行代码
-  console.log('执行代码monaco-editor')
     import('monaco-editor').then(monaco => {
       import('monaco-editor/esm/vs/editor/editor.worker?worker')
       import('monaco-editor/esm/vs/language/json/json.worker?worker')
@@ -71,6 +73,7 @@ onMounted(() => {
       rusultediot = monaco.editor.create(rusult, {
         value: '',
         language: 'javascript',
+         readOnly: true,
         theme: isDark.value ? 'vs-dark' : '',
       })
 
@@ -87,22 +90,39 @@ const runcode = () => {
   if (monacoEditor) {
     const code = monacoEditor.getValue()
     axios
-      .post('http://localhost:3000/code', {
+      .post('http://demo.gyhtop.top:5117/', {
         code,
         language: modellang.value,
       })
       .then((res) => {
-        console.log(res)
+        console.log('res', res)
         rusultediot.setValue(res.data)
       })
   }
 }
 </script>
 
-<style>
-# get {
+<style >
+.get {
   display: flex;
   justify-content: end;
   margin: 20px 0;
 }
+.btnx{
+ display: flex;
+ justify-content: end;
+}
+.codebtn{
+  /* 增加阴影等样式 */
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.codebtn:hover {
+  background-color: var(--vp-c-bg);
+
+}
+
 </style>
