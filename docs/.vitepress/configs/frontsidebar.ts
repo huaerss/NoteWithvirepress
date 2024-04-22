@@ -16,6 +16,10 @@ export const frontsidebar: DefaultTheme.Config['sidebar'] = [
             text: 'TS装饰器 Decorator*',
             link: '/front/ts/TS装饰器Decorator.md',
           },
+          {
+            text: 'Reflect反射',
+            link: '/front/js/Reflect.md',
+          },
         ],
       },
       {

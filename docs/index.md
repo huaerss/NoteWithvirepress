@@ -35,11 +35,11 @@ features:
     details: <small>NestJS 是一个渐进式的企业级 Node.js 和 TypeScript 框架，它融合了 Angular 的结构和 Express 的简洁性。</small> 
     link: /back/node-frame/Nest创建
     linkText: NestJs
-  - icon: 🍇
-    title: w
-    details: 
-    link: /back/node-frame/Nest创建
-    linkText: 
+  - icon: 🎯
+    title: 操场
+    details: 代码在线运行服务, 可以执行进行代码片段测试
+    link: /playground/
+    linkText: text
   - icon: 😭
     title: 
     details:

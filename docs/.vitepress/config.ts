@@ -1,7 +1,6 @@
 import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
-import monacoEditorPlugin from 'vite-plugin-monaco-editor'
 
 import { head, nav, sidebar, frontsidebar, anysidebar } from './configs'
 
@@ -29,7 +28,6 @@ export default defineConfig({
       provider: 'local',
     },
     logo: '/logo.png',
-
     nav,
     sidebar: {
       '/front/': frontsidebar,
@@ -56,5 +54,17 @@ export default defineConfig({
 
   vite: {
     plugins: [MarkdownPreview()],
+    ssr: {
+      noExternal: ['monaco-editor'],
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'monaco-editor': ['monaco-editor'],
+        },
+      },
+    },
   },
 })
