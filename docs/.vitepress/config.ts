@@ -33,6 +33,7 @@ export default defineConfig({
       '/front/': frontsidebar,
       '/back/': sidebar,
       '/any/': anysidebar,
+      '/playground/': [],
     },
     /* 右侧大纲配置 */
     outline: {

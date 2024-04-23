@@ -9,19 +9,20 @@ sidebar: false
   </select>
 </div>
 <div class='happ'>
- <div id='container' style="width: 800px; height: 400px"></div>
+ <div id='container' style="width: 1200px; height: 400px"></div>
  <div class='btnx'>
  <button @click='runcode' class='codebtn'>点击运行</button>
  </div>
 
    `代码结果:`
- <div id='rusult' style="width: 800px; height: 100px"></div>
+ <div id='rusult' style="width: 1200px; height: 200px"></div>
 </div>
 
 <script setup>
 import { onMounted, watch, ref } from 'vue'
 import axios from 'axios'
 import { useData } from 'vitepress'
+
 const { isDark } = useData()
 let monacoEditor, rusultediot
 const modellang = ref('javascript')
@@ -37,17 +38,15 @@ const languages = [
 ]
 
 onMounted(() => {
-   console.log('mounted')
-   console.log('sssr??',import.meta.env.SSR)
 
   if (!import.meta.env.SSR) { // 只在客户端执行
+  import('monaco-editor/esm/vs/editor/editor.worker?worker')
+  import('monaco-editor/esm/vs/language/json/json.worker?worker')
+  import('monaco-editor/esm/vs/language/css/css.worker?worker')
+  import('monaco-editor/esm/vs/language/html/html.worker?worker')
+  import('monaco-editor/esm/vs/language/typescript/ts.worker?worker')
   //执行代码
     import('monaco-editor').then(monaco => {
-      import('monaco-editor/esm/vs/editor/editor.worker?worker')
-      import('monaco-editor/esm/vs/language/json/json.worker?worker')
-      import('monaco-editor/esm/vs/language/css/css.worker?worker')
-      import('monaco-editor/esm/vs/language/html/html.worker?worker')
-      import('monaco-editor/esm/vs/language/typescript/ts.worker?worker')
 
       self.MonacoEnvironment = {
         getWorker(_, label) {
@@ -80,6 +79,7 @@ onMounted(() => {
       const lang = document.querySelector('#lang')
       lang.addEventListener('change', (e) => {
         const newLang = e.target.value
+        modellang.value = newLang
         monaco.editor.setModelLanguage(monacoEditor.getModel(), newLang)
       })
     })
@@ -90,12 +90,12 @@ const runcode = () => {
   if (monacoEditor) {
     const code = monacoEditor.getValue()
     axios
-      .post('https://demo.gyhtop.top:5117/', {
+      .post('https://demo.gyhtop.top:5117', {
         code,
         language: modellang.value,
       })
       .then((res) => {
-        console.log('res', res)
+        console.log('res', res.data)
         rusultediot.setValue(res.data)
       })
   }
@@ -123,6 +123,9 @@ const runcode = () => {
 .codebtn:hover {
   background-color: var(--vp-c-bg);
 
+}
+.aside{
+  display: none;
 }
 
 </style>
