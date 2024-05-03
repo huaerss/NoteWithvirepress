@@ -1,7 +1,5 @@
 # perplexity pro 申请方法
 
- 
-
 ## 1.生成卡片
 
 [Random Credit Card Number Generator for Testing and Development - Namsogen (namso-gen.com)](https://namso-gen.com/?tab=advance&network=MasterCard)
@@ -23,8 +21,9 @@
 [美国地址生成器 - 美国身份生成器 - 美国信用卡生成器 (meiguodizhi.com)](https://www.meiguodizhi.com/)
 
 ## 5.官网地址  
+
 [https://www.perplexity.ai/](https://www.perplexity.ai/)  邀请码CRNT018
 
 ## 6.模型介绍
 
-![image-20240330145932957](perplexity pro 申请方法.assets/image-20240330145932957.png)
+![image-20240330145932957](./img/image-20240330145932957.png)
