@@ -23,7 +23,7 @@ sudo yum install nodejs
 npm install pm2 -g
 ```
 
-## 启动应用
+## 启动项目
 
 ``` shell
 pm2 start app.js
@@ -31,8 +31,26 @@ pm2 start app.js
 pm2 start app.js --name my-api
 ```
 
-## 重启应用
+## 重启指定的项目
 
 ``` shell
 pm2 restart app_name
+```
+
+## 修改指定项目的名字
+
+``` shell
+ pm2 rename <current_name> <new_name>
+```
+
+## 删除指定的项目ID
+
+``` shell
+pm2 delete <id>
+```
+
+## 输出指定的项目日志
+
+``` shell
+pm2 logs <id>
 ```
