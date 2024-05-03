@@ -11,6 +11,22 @@ import './styles/index.scss'
 
 let homePageStyle: HTMLStyleElement | undefined
 
+declare global {
+  interface Window {
+    dec: (pwd: string) => void
+  }
+}
+
+window.dec = (pwd: string) => {
+  localStorage.setItem('pwd', pwd)
+  let event = new CustomEvent('setItem', { detail: pwd })
+  window.dispatchEvent(event)
+}
+// 在页面关闭时，清除 localStorage
+window.addEventListener('beforeunload', () => {
+  localStorage.removeItem('pwd')
+})
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
