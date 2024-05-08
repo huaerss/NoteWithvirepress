@@ -6,6 +6,15 @@
 docker --version
 ```
 
+## 构建docker镜像
+
+```shell
+docker build -t <你的应用名>:<标签> 
+docker build -t my-node-app:latest . // 构建一个名为my-node-app的镜像
+docker run -d -p 8080:8080 --name my-running-app my-node-app:latest
+
+```
+
 ## 启动容器
 
 ```shell
