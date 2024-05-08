@@ -1,6 +1,7 @@
 import { h, watch } from 'vue'
 import { useData, EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import Logo from './logo.vue'
 
 import { createMediumZoomProvider } from './composables/useMediumZoom'
 
@@ -27,7 +28,7 @@ export default {
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
     createMediumZoomProvider(app, router)
-
+    app.component('Logo', Logo)
     app.component('MNavLinks', MNavLinks)
 
     if (typeof window !== 'undefined') {

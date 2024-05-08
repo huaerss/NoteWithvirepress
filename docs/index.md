@@ -7,7 +7,7 @@ hero:
   text: 什么都沾点
   tagline: 个人积累以及学习笔记
   image:
-    src: /logo.png
+    src: /Logo.png
     link: '/'
     alt: everything
   actions:
@@ -30,7 +30,7 @@ features:
     details: 在各种地方中学到的一切<small>（常用库/工具/技巧等）</small><br />
     link: /any/
     linkText: everything
-  - icon: 📚
+  - icon:  📚  
     title: NestJS
     details: <small>NestJS 是一个渐进式的企业级 Node.js 和 TypeScript 框架，它融合了 Angular 的结构和 Express 的简洁性。</small> 
     link: /back/node-frame/Nest创建

@@ -26,6 +26,15 @@ export const anysidebar: DefaultTheme.Config['sidebar'] = [
         ],
       },
       {
+        text: 'Docker',
+        items: [
+          {
+            text: 'Docker 指令',
+            link: '/any/Docker/docker指令.md',
+          },
+        ],
+      },
+      {
         text: '杂食技巧',
         items: [
           {

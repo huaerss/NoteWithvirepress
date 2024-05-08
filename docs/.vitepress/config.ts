@@ -27,13 +27,13 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
-    logo: '/logo.png',
+    logo: '/Logo.png',
     nav,
     sidebar: {
       '/front/': frontsidebar,
       '/back/': sidebar,
       '/any/': anysidebar,
-      '/playground/': [],
+      '/playground/': [] as any,
     },
     /* 右侧大纲配置 */
     outline: {
