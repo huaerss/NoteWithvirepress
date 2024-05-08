@@ -23,6 +23,10 @@ export const anysidebar: DefaultTheme.Config['sidebar'] = [
             text: 'Nginx 常用指令以及调试',
             link: '/any/Nginx/nginx常用指令以及调试.md',
           },
+          {
+            text: 'Nginx 配置https',
+            link: '/any/Nginx/nginx配置https.md',
+          },
         ],
       },
       {
