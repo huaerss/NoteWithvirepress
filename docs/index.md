@@ -7,7 +7,7 @@ hero:
   text: 什么都沾点
   tagline: 个人积累以及学习笔记
   image:
-    src: /Logo.png
+    src: /logo.png
     link: '/'
     alt: everything
   actions:

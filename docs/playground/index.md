@@ -21,6 +21,7 @@ sidebar: false
 <script setup>
 import { onMounted, watch, ref } from 'vue'
 import axios from 'axios'
+import {io } from 'socket.io-client'
 import { useData } from 'vitepress'
 
 const { isDark } = useData()
@@ -95,7 +96,6 @@ const runcode = () => {
         language: modellang.value,
       })
       .then((res) => {
-        console.log('res', res.data)
         rusultediot.setValue(res.data)
       })
   }
