@@ -50,10 +50,10 @@ features:
 ---
 
 <style>
-.m-home-layout .image-src:hover {
+/* .m-home-layout .image-src:hover {
   transform: translate(-50%, -50%) rotate(666turn);
   transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
-}
+} */
 
 .m-home-layout .details small {
   opacity: 0.8;
