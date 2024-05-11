@@ -48,12 +48,28 @@ features:
 
 
 ---
-
 <style>
-/* .m-home-layout .image-src:hover {
-  transform: translate(-50%, -50%) rotate(666turn);
-  transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
-} */
+
+@media (min-width: 640px) {
+  .m-home-layout .image-src {
+    max-width: 450px;
+    max-height: 450px;
+  }
+}
+
+@media (min-width: 960px) {
+  .m-home-layout .image-src {
+    max-width: 685px;
+    max-height: 800px;
+  }
+}
+/* 适配手机端 */
+@media (max-width: 440px) {
+  .m-home-layout .image-src {
+    max-width: 392px;
+    max-height: 392px;
+  }
+}
 
 .m-home-layout .details small {
   opacity: 0.8;
