@@ -45,7 +45,7 @@ docker ps
 ## 访问mysql 并允许远程访问
 
 ```shell
-mysql -h 127.0.0.1 -p 3306 -u root -p 123456
+mysql -h 127.0.0.1 -P 3306 -u root -p 
 ```
 
 ### 允许远程访问
