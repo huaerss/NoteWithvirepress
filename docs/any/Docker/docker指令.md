@@ -6,7 +6,16 @@
 docker --version
 ```
 
-## 构建docker镜像
+## 安装镜像以及查看镜像的版本
+
+```shell
+docker search <镜像名>
+docker pull <镜像名>:<标签>
+docker pull nginx:latest // 安装nginx镜像
+docker images // 查看所有镜像
+```
+
+## 构建自己的docker镜像
 
 ```shell
 docker build -t <你的应用名>:<标签> 
@@ -62,3 +71,23 @@ docker rm -f $(docker ps -aq)
 ```
 
 `-f` 或`--force` 选项会强制停止运行中的容器，然后将其删除。
+
+## 删除docker镜像
+
+### 删除单个镜像
+
+```shell
+docker rmi <镜像ID>
+```
+
+### 删除所有镜像
+
+```shell
+docker rmi $(docker images -a -q)
+```
+
+`docker images -a -q`：列出所有镜像的 ID，-a 表示所有镜像（包括未使用的），-q 表示只输出镜像 ID。
+
+`$(...)`：将 `docker images -a -q` 的输出作为 `docker rmi`命令的参数。
+
+`docker rmi`：删除指定的镜像，这里使用`$(docker images -a -q)` 的输出作为参数，即删除所有镜像。
