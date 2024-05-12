@@ -8,6 +8,7 @@ hero:
   tagline: 个人积累以及学习笔记
   image:
     src: /logo.png
+    
     link: '/'
     alt: everything
   actions:

@@ -1,9 +1,9 @@
 import { h, watch } from 'vue'
-import { useData, EnhanceAppContext } from 'vitepress'
+import { useData, EnhanceAppContext, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import googleAnalytics from 'vitepress-plugin-google-analytics'
-
+import googleAnalytics from 'vitepress-plugin-google-analytics' // 引入 google-analytics 插件
 import { createMediumZoomProvider } from './composables/useMediumZoom'
+import giscusTalk from 'vitepress-plugin-comment-with-giscus' // 引入 giscus 插件
 
 import MLayout from './components/MLayout.vue'
 import MNavLinks from './components/MNavLinks.vue'
@@ -50,6 +50,27 @@ export default {
         { immediate: true },
       )
     }
+  },
+  setup() {
+    const { frontmatter } = useData()
+    const route = useRoute()
+    giscusTalk(
+      {
+        repo: 'huaerss/NoteWithvirepress', //仓库
+        repoId: 'R_kgDOLmhyqA', //仓库ID
+        category: 'Announcements', // 讨论分类
+        categoryId: 'DIC_kwDOLmhyqM4CfTfE', //讨论分类ID
+        mapping: 'pathname',
+        inputPosition: 'bottom',
+        lang: 'zh-CN',
+      },
+      {
+        frontmatter,
+        route,
+      },
+
+      true,
+    )
   },
 }
 
