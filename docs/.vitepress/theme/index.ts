@@ -1,6 +1,7 @@
 import { h, watch } from 'vue'
 import { useData, EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import googleAnalytics from 'vitepress-plugin-google-analytics'
 
 import { createMediumZoomProvider } from './composables/useMediumZoom'
 
@@ -32,7 +33,10 @@ export default {
     return h(MLayout, props)
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
-    createMediumZoomProvider(app, router)
+    googleAnalytics({
+      id: 'G-034XV7PYBM', //跟踪ID，在analytics.google.com注册即可
+    }),
+      createMediumZoomProvider(app, router)
     app.component('MNavLinks', MNavLinks)
 
     if (typeof window !== 'undefined') {
