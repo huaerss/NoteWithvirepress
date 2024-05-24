@@ -35,11 +35,13 @@ pnpm install @nestjs/platform-express
 
 在main.ts中配置
 
-``` js
+``` ts
 import { NestExpressApplication } from '@nestjs/platform-express';
 const app = await NestFactory.create<NestExpressApplication>(AppModule);
+import * as path from 'path';
 // 配置静态文件夹目录
-  app.useStaticAssets('public',{ prefix: '/public' });
+  app.useStaticAssets('public',{ prefix: '/public' }); // 访问路径为http://localhost:3000/public/index.html
+  app.useStaticAssets(path.join(__dirname, '..', 'public')); // 访问路径为http://localhost:3000/index.html 使用相对路径
 
 
 ```

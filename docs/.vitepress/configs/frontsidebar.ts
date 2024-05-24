@@ -20,6 +20,14 @@ export const frontsidebar: DefaultTheme.Config['sidebar'] = [
             text: 'Reflect反射',
             link: '/front/js/Reflect.md',
           },
+          {
+            text: '加密',
+            link: '/front/js/js加密.md',
+          },
+          {
+            text: '混淆',
+            link: '/front/js/js混淆.md',
+          },
         ],
       },
       {

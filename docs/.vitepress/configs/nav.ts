@@ -8,7 +8,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '工具站点',
     items: [
-      { text: 'ChatAI', link: 'https://www.gyhtop.top/' },
+      { text: 'ChatAI', link: 'https://chat.gyh.one/' },
       { text: 'eletools', link: 'https://github.com/huaerss/eletools' },
     ],
   },
