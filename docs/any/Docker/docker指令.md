@@ -27,7 +27,7 @@ docker run -d -p 8080:8080 --name my-running-app my-node-app:latest
 ## 启动容器
 
 ```shell
-docker run -d -p 8080:80 --name mynginx nginx  // 启动一个nginx容器 并映射到本地8080端口
+docker run -d -p 8080:80 --name mynginx nginx  // 启动一个nginx容器 并映射到本地8080端口 -d 后台运行
 
 ```
 
@@ -91,3 +91,41 @@ docker rmi $(docker images -a -q)
 `$(...)`：将 `docker images -a -q` 的输出作为 `docker rmi`命令的参数。
 
 `docker rmi`：删除指定的镜像，这里使用`$(docker images -a -q)` 的输出作为参数，即删除所有镜像。
+
+
+## 在window上构建好如何在linux上运行
+
+### 保存镜像
+
+```shell
+docker save -o <保存路径> <镜像名>:<标签>
+docker save -o my-node-app.tar my-node-app:latest
+```
+
+### 加载镜像
+
+```shell
+docker load -i <镜像路径>
+docker load -i my-node-app.tar
+```
+
+### 上传到dockerhub
+
+```shell
+docker login
+docker tag <标签ID> <你的dockerhub用户名>/<app名称>:latest
+docker push <你的dockerhub用户名>/<app名称>:latest
+
+```
+
+### 从dockerhub下载
+
+```shell
+docker pull <你的dockerhub用户名>/<app名称>:latest
+```
+
+## 查看容器日志
+
+```shell
+docker logs <容器ID>
+```
