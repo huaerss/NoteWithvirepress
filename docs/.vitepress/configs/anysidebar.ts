@@ -40,6 +40,10 @@ export const anysidebar: DefaultTheme.Config['sidebar'] = [
             text: 'Docker启动mysql',
             link: '/any/Docker/docker启动mysql.md',
           },
+          {
+            text: 'DockerCompose指令',
+            link: '/any/Docker/docker-compose指令.md',
+          },
         ],
       },
       {

@@ -1,6 +1,6 @@
-# Dokcer常用指令
+# Dokcer 常用指令
 
-## 查看Docker版本
+## 查看 Docker 版本
 
 ```shell
 docker --version
@@ -15,10 +15,10 @@ docker pull nginx:latest // 安装nginx镜像
 docker images // 查看所有镜像
 ```
 
-## 构建自己的docker镜像
+## 构建自己的 docker 镜像
 
 ```shell
-docker build -t <你的应用名>:<标签> 
+docker build -t <你的应用名>:<标签>
 docker build -t my-node-app:latest . // 构建一个名为my-node-app的镜像
 docker run -d -p 8080:8080 --name my-running-app my-node-app:latest
 
@@ -31,7 +31,7 @@ docker run -d -p 8080:80 --name mynginx nginx  // 启动一个nginx容器 并映
 
 ```
 
-## 查看正在运行的容器 ps命令
+## 查看正在运行的容器 ps 命令
 
 ```shell
 docker ps   // 查看正在运行的容器
@@ -47,14 +47,14 @@ docker ps -q // 只显示容器ID
 
 ```shell
 docker stop 容器ID
-dcoker stop $(docker ps -aq) // 停止所有容器 
+dcoker stop $(docker ps -aq) // 停止所有容器
 
 ```
 
 这个命令的工作原理是：
 
-`docker ps -aq` 会列出所有容器的ID（无论状态如何）。
-`docker stop`命令会停止一个或多个容器。通过将所有容器ID传递给`docker stop`，它会停止所有容器。
+`docker ps -aq` 会列出所有容器的 ID（无论状态如何）。
+`docker stop`命令会停止一个或多个容器。通过将所有容器 ID 传递给`docker stop`，它会停止所有容器。
 
 ### 删除所有容器
 
@@ -72,7 +72,7 @@ docker rm -f $(docker ps -aq)
 
 `-f` 或`--force` 选项会强制停止运行中的容器，然后将其删除。
 
-## 删除docker镜像
+## 删除 docker 镜像
 
 ### 删除单个镜像
 
@@ -92,8 +92,7 @@ docker rmi $(docker images -a -q)
 
 `docker rmi`：删除指定的镜像，这里使用`$(docker images -a -q)` 的输出作为参数，即删除所有镜像。
 
-
-## 在window上构建好如何在linux上运行
+## 在 window 上构建好如何在 linux 上运行
 
 ### 保存镜像
 
@@ -107,9 +106,10 @@ docker save -o my-node-app.tar my-node-app:latest
 ```shell
 docker load -i <镜像路径>
 docker load -i my-node-app.tar
+
 ```
 
-### 上传到dockerhub
+### 上传到 dockerhub
 
 ```shell
 docker login
@@ -118,7 +118,7 @@ docker push <你的dockerhub用户名>/<app名称>:latest
 
 ```
 
-### 从dockerhub下载
+### 从 dockerhub 下载
 
 ```shell
 docker pull <你的dockerhub用户名>/<app名称>:latest
