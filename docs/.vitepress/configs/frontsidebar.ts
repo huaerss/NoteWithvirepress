@@ -38,9 +38,25 @@ export const frontsidebar: DefaultTheme.Config['sidebar'] = [
             link: '/front/vue/Proxy和defineProperty的区别.md',
           },
           {
-            text: '按钮级别权限控制自定义指令',
+            text: '权限控制自定义指令',
             link: '/front/vue/按钮级别权限控制.md',
           },
+        ],
+      },
+      {
+        text: 'react',
+        items: [
+
+        ],
+      },
+      {
+        text: '构建工具',
+        items: [
+          {
+            text: 'Babel以及AST',
+            link: '/front/builder/babel.md',
+          },
+
         ],
       },
     ],

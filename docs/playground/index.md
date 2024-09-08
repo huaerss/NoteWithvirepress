@@ -1,6 +1,9 @@
 ---
-sidebar: false
+# sidebar: false  
+# aside: false
+# layout: home
 ---
+
 # 代码编辑器
 
 <div id='get' class='get'>

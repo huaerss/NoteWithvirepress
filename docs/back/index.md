@@ -1,7 +1,6 @@
 ---
 layoutClass: m-nav-layout
 outline: [2, 3, 4]
-
 ---
 
 <script setup>
@@ -26,7 +25,7 @@ fetch("https://htmlpng-mmo-yxvdsihnpa.cn-shenzhen.fcapp.run",{
 .catch(err => {
 data.value = [
   {
-    title: '数据加载失败',
+    title: '暂停服务',
   }
 ]
 })
