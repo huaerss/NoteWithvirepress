@@ -21,8 +21,8 @@ features:
     details: 整理前端常用知识点
     link: '/front/'
     linkText: 前端常用知识
-  - icon: 🚀
-    title: 后端学习
+  - icon: 💻
+    title: 后端
     details: 个人后端学习笔记
     link: /back/
     linkText: 源码阅读

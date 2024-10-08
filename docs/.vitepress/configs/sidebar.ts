@@ -67,6 +67,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
           },
         ],
       },
+      {
+        text: 'Java',
+        items: [
+          {
+            text: '多线程组件',
+            link: '/back/java/Thread.md',
+          },
+        ],
+      },
     ],
   },
 ]
