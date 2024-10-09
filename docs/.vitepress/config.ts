@@ -8,7 +8,7 @@ const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: 'dist',
-  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  base: process.env.NODE_ENV === 'production' ? `/${APP_BASE_PATH}/` : '/',
   // base: '/',
   lang: 'zh-CN',
   title: 'ALL IN',
@@ -34,7 +34,7 @@ export default defineConfig({
       '/back/': sidebar,
       '/any/': anysidebar,
       '/playground/': [] as any,
-    },
+    } as any,
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',

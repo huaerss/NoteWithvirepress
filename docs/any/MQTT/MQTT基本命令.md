@@ -27,3 +27,4 @@ mosquitto_sub -h localhost  -p 7799 -t test/topic -v
 mosquitto_pub -h <MQTT服务器地址> -t <主题名> -m "<消息内容>"
 mosquitto_pub -h localhost -p 7799 -t test/topic -m "Hello, MQTT!"
 ```
+
