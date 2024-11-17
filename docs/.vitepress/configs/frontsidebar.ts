@@ -28,6 +28,10 @@ export const frontsidebar: DefaultTheme.Config['sidebar'] = [
             text: '混淆',
             link: '/front/js/js混淆.md',
           },
+          {
+            text: 'CSS 变量',
+            link: '/front/js/css变量.md',
+          },
         ],
       },
       {
