@@ -45,6 +45,10 @@ export const frontsidebar: DefaultTheme.Config['sidebar'] = [
             text: '权限控制自定义指令',
             link: '/front/vue/按钮级别权限控制.md',
           },
+          {
+            text: '虚拟DOM',
+            link: '/front/vue/虚拟DOM.md',
+          },
         ],
       },
       {
